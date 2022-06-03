@@ -1,0 +1,24 @@
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "1.0",
+	"FriendlyName": "TenxSourceCodeAccess",
+	"Description": "10xSourceCodeAccess adds an option to select 10x editor as your source code editor in Unreal Editor.",
+	"Category": "Other",
+	"CreatedBy": "rwxtom",
+	"CreatedByURL": "https://github.com/rwxtom/10xSourceCodeAccess",
+	"DocsURL": "",
+	"MarketplaceURL": "",
+	"SupportURL": "",
+	"CanContainContent": true,
+	"IsBetaVersion": false,
+	"IsExperimentalVersion": false,
+	"Installed": false,
+	"Modules": [
+		{
+			"Name": "TenxSourceCodeAccess",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		}
+	]
+}
