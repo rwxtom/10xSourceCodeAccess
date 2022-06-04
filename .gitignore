@@ -1,3 +1,6 @@
+build.bat
+editor.bat
+vars.bat
 .vs/
 *.slo
 *.lo
@@ -28,8 +31,7 @@
 *.uproject
 SourceArt/**/*.png
 SourceArt/**/*.tga
-Binaries/*
-Plugins/*/Binaries/*
+Binaries/
 Build/
 !Build/*/
 Build/*/**
@@ -39,7 +41,10 @@ Build/*/**
 Config/
 Content/
 Saved/
+Script/
 Source/
 Intermediate/
-Plugins/*/Intermediate/
 DerivedDataCache/
+Plugins/Intermediate/
+Plugins/Binaries/
+!Plugins/Source/
