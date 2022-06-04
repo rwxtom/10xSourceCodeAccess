@@ -7,7 +7,10 @@ public class TenxSourceCodeAccess : ModuleRules
 	public TenxSourceCodeAccess(ReadOnlyTargetRules Target) : base(Target)
 	{
 		PCHUsage = ModuleRules.PCHUsageMode.UseExplicitOrSharedPCHs;
-		
+			
+		bUsePrecompiled = true;
+		PrecompileForTargets = PrecompileTargetsType.Any;
+
 		PublicIncludePaths.AddRange(
 			new string[] {
 				// ... add public include paths required here ...
@@ -38,10 +41,7 @@ public class TenxSourceCodeAccess : ModuleRules
 				"Engine",
 				"Slate",
 				"SlateCore",
-				"SourceCodeAccess",
-				"DesktopPlatform",
-				"Projects",
-				"Json"
+				"SourceCodeAccess"
 				// ... add private dependencies that you statically link with here ...	
 			}
 			);
