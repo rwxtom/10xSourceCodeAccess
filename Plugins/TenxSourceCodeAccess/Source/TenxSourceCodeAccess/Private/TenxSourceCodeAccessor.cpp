@@ -121,10 +121,20 @@ bool FTenxSourceCodeAccessor::OpenFileAtLine(const FString& FullPath, int32 Line
 		return false;
 
 	const FString Path = FString::Printf(TEXT("\"%s\""), *FullPath);
-	const TArray<FString>& SourcePath = {Path};
-	OpenSourceFiles(SourcePath);
+	const FString Params = FString::Printf(TEXT("%s N10X.Editor.SetCursorPos((0,%d))"), *Path, LineNumber - 1);
 
-	return true;
+	return RunTenx([this, &Params, &Path]()->bool
+		{
+			FProcHandle Proc = FPlatformProcess::CreateProc(*TenxLocation, *Params, true, true, false, nullptr, 0, nullptr, nullptr);
+			const bool bSuccess = Proc.IsValid();
+			if (!bSuccess)
+			{
+				UE_LOG(LogTenxSourceCodeAccessor, Warning, TEXT("Failed to open source files %s"), *Path);
+				FPlatformProcess::CloseProc(Proc);
+				return false;
+			}
+			return bSuccess;
+		});
 }
 
 bool FTenxSourceCodeAccessor::OpenSourceFiles(const TArray<FString>& AbsoluteSourcePaths)

@@ -7,9 +7,10 @@ public class TenxSourceCodeAccess : ModuleRules
 	public TenxSourceCodeAccess(ReadOnlyTargetRules Target) : base(Target)
 	{
 		PCHUsage = ModuleRules.PCHUsageMode.UseExplicitOrSharedPCHs;
-			
-		//bUsePrecompiled = true;
-		//PrecompileForTargets = PrecompileTargetsType.Any;
+		
+		// Comment these if you need to debug:
+		bUsePrecompiled = true;
+		PrecompileForTargets = PrecompileTargetsType.Any;
 
 		PublicIncludePaths.AddRange(
 			new string[] {
