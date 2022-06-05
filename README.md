@@ -1,6 +1,7 @@
-#UE5 10x editor source code accessor plugin
+##UE5 10x editor source code accessor plugin
 
-This is very WIP and some of the features dont work yet (like double clicking blueprint node doesnt yet bring you to the nodes c++ implementation). Only tested in Windows 10.
+This is WIP and some of the features dont work yet. Like double clicking blueprint node doesnt bring you to the correct line in that nodes c++ implementation, but opens correct file.
+Only tested in Windows 10.
 
 ## Requirements
 The plugin needs to know where 10x editor is installed, so currently it requires environment variable called "TENX_EXECUTABLE" that points to 10x.exe location.

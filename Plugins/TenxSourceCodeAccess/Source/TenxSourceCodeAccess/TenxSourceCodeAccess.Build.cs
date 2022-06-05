@@ -8,8 +8,8 @@ public class TenxSourceCodeAccess : ModuleRules
 	{
 		PCHUsage = ModuleRules.PCHUsageMode.UseExplicitOrSharedPCHs;
 			
-		bUsePrecompiled = true;
-		PrecompileForTargets = PrecompileTargetsType.Any;
+		//bUsePrecompiled = true;
+		//PrecompileForTargets = PrecompileTargetsType.Any;
 
 		PublicIncludePaths.AddRange(
 			new string[] {

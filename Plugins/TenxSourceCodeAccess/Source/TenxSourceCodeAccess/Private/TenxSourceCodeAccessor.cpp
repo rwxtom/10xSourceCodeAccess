@@ -117,11 +117,11 @@ bool FTenxSourceCodeAccessor::DoesSolutionExist() const
 
 bool FTenxSourceCodeAccessor::OpenFileAtLine(const FString& FullPath, int32 LineNumber, int32 ColumnNumber)
 {
-	if (bHasTenxInstalled)
+	if (!bHasTenxInstalled)
 		return false;
 
 	const FString Path = FString::Printf(TEXT("\"%s\""), *FullPath);
-	const FString Params = FString::Printf(TEXT("\"%s\" --line %d \"%s\""), LineNumber, ColumnNumber, *Path);
+	const FString Params = FString::Printf(TEXT("+%d:%d %s"), LineNumber, ColumnNumber, *Path);
 
 	return RunTenx([this, &Params, &Path, LineNumber]()->bool
 	{

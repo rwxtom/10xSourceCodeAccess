@@ -1,4 +1,5 @@
 build.bat
+build_debug.bat
 editor.bat
 vars.bat
 .vs/
