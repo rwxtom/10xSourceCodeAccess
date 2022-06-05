@@ -1,6 +1,5 @@
 ## UE5 10x editor source code accessor plugin
 This plugin adds an option to select 10x editor as your source code editor in Unreal Editor.
-Only tested in Windows 10 and Unreal Engine 5.0.2.
 
 ## Requirements
 The plugin needs to know where 10x editor is installed, so currently it requires environment variable called "TENX_EXECUTABLE" that points to 10x.exe location.
