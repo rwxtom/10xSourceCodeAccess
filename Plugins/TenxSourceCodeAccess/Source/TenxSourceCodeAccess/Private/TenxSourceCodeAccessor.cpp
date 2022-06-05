@@ -140,7 +140,7 @@ bool FTenxSourceCodeAccessor::OpenFileAtLine(const FString& FullPath, int32 Line
 bool FTenxSourceCodeAccessor::OpenSourceFiles(const TArray<FString>& AbsoluteSourcePaths)
 {
 	if (!bHasTenxInstalled)
-		return true;
+		return false;
 
 	FString SolutionPath = FPaths::GetProjectFilePath();
 
